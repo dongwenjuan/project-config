@@ -21,6 +21,14 @@ source /etc/nodepool/provider
 # Generate the AFS Slug from the host system.
 source /usr/local/jenkins/slave_scripts/afs-slug.sh
 
+# set DNS address for openstack env
+OPENSTACK_DNS_1=172.10.0.1
+OPENSTACK_DNS_2=172.20.0.1
+echo "nameserver $OPENSTACK_DNS_1" |sudo tee -a /etc/resolv.conf
+echo "nameserver $OPENSTACK_DNS_2" |sudo tee -a /etc/resolv.conf
+
+NODEPOOL_MIRROR_HOST=mirrors.zte.com.cn
+
 NODEPOOL_MIRROR_HOST=${NODEPOOL_MIRROR_HOST:-mirror.$NODEPOOL_REGION.$NODEPOOL_CLOUD.openstack.org}
 NODEPOOL_MIRROR_HOST=$(echo $NODEPOOL_MIRROR_HOST|tr '[:upper:]' '[:lower:]')
 NODEPOOL_PYPI_MIRROR=${NODEPOOL_PYPI_MIRROR:-http://$NODEPOOL_MIRROR_HOST/pypi/simple}
