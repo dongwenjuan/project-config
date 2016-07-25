@@ -22,7 +22,7 @@ source /etc/nodepool/provider
 source /usr/local/jenkins/slave_scripts/afs-slug.sh
 
 # set DNS address for openstack env
-# echo "nameserver 172.10.0.1" |sudo tee -a /etc/resolv.conf
+echo "nameserver 172.10.0.1" |sudo tee -a /etc/resolv.conf
 
 # DhClient will delete all DNS when release expire.
 # So if only modify the /etc/resolv.conf, it will out of operation after a
@@ -31,8 +31,8 @@ source /usr/local/jenkins/slave_scripts/afs-slug.sh
 # will call when dhclient sets each interface's initial configuration.
 # It will override the default behaviour of the client in creating a
 # /etc/resolv.conf file
-#sudo sed -i -e '/mv -f $new_resolv_conf $resolv_conf/a\
-#        echo "nameserver 172.10.0.1" >> $resolv_conf' /sbin/dhclient-script
+sudo sed -i -e '/mv -f $new_resolv_conf $resolv_conf/a\
+        echo "nameserver 172.10.0.1" >> $resolv_conf' /sbin/dhclient-script
 
 NODEPOOL_MIRROR_HOST=mirrors.zte.com.cn
 
