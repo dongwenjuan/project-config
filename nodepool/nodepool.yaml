@@ -68,7 +68,8 @@ diskimages:
       - infra-package-needs
     release: trusty
     env-vars:
-      DIB_DISTRIBUTION_MIRROR: http://mirrors.zte.com.cn/ubuntu/
+      # DIB_DISTRIBUTION_MIRROR: http://mirrors.zte.com.cn/ubuntu/
+      DIB_DISTRIBUTION_MIRROR: http://mirrors.tuna.tsinghua.edu.cn/ubuntu/
       TMPDIR: /opt/dib_tmp
       DIB_IMAGE_CACHE: /opt/dib_cache
       DIB_APT_LOCAL_CACHE: '0'
