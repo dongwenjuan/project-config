@@ -34,7 +34,8 @@ echo "nameserver 172.10.0.1" |sudo tee -a /etc/resolv.conf
 sudo sed -i -e '/mv -f $new_resolv_conf $resolv_conf/a\
         echo "nameserver 172.10.0.1" >> $resolv_conf' /sbin/dhclient-script
 
-NODEPOOL_MIRROR_HOST=mirrors.zte.com.cn
+NODEPOOL_MIRROR_HOST=mirrors.tuna.tsinghua.edu.cn
+# mirrors.zte.com.cn
 
 NODEPOOL_MIRROR_HOST=${NODEPOOL_MIRROR_HOST:-mirror.$NODEPOOL_REGION.$NODEPOOL_CLOUD.openstack.org}
 NODEPOOL_MIRROR_HOST=$(echo $NODEPOOL_MIRROR_HOST|tr '[:upper:]' '[:lower:]')
