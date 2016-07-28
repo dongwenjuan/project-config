@@ -41,7 +41,7 @@ providers:
     rate: 0.001
     image-type: qcow2
     networks:
-      - net-id: 63f01053-c21a-4874-b1bb-b0c27283aa7a
+      - net-id: add16b70-14fc-402f-bd52-459cab1fd2e6
     images:
       - name: ubuntu-trusty
         min-ram: 8192
