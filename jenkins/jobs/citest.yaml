@@ -1,0 +1,15 @@
+- job-template:
+    name: '{name}-verified-flow'
+    node: ubuntu-trusty
+
+    builders:
+      - link-logs
+      - net-info
+      - devstack-checkout
+      - shell: |
+          #!/bin/bash -xe
+          sudo apt-update
+
+    publishers:
+      - test-results
+      - console-log
