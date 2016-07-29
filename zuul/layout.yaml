@@ -2993,12 +2993,6 @@ jobs:
 
 projects:
   
-  - name: citest
-    check:
-      - citest-verified-flow
-    gate:
-      - citest-verified-flow
-  
   - name: openstack-dev/bashate
     template:
       - name: merge-check
