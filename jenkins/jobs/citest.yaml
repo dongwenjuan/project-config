@@ -1,0 +1,12 @@
+- job:
+    name: 'citest-verified-flow'
+    node: ubuntu-trusty
+
+    builders:
+      - shell: |
+          #!/bin/bash -xe
+          sudo apt-update
+
+    publishers:
+      - test-results
+      - console-log
