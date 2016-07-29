@@ -124,53 +124,53 @@
 #      - gate-anvil-venv-{node}:
 #          node: ubuntu-trusty
 #
-- project:
-    name: aodh
-    tarball-site: tarballs.openstack.org
-    doc-publisher-site: docs.openstack.org
-
-    jobs:
-      - python-jobs
-      - 'gate-{name}-python35{suffix}':
-          suffix: ''
-      - pypi-jobs
-      - openstack-publish-jobs
-      - translation-jobs
-      - openstack-releasenotes-jobs
-      - '{pipeline}-aodh-dsvm-functional-{backend}':
-          node: ubuntu-trusty
-          pipeline: gate
-          backend: hbase
-      - '{pipeline}-aodh-dsvm-functional-{backend}':
-          node: ubuntu-trusty
-          pipeline: gate
-          backend: mysql
-      - '{pipeline}-aodh-dsvm-functional-{backend}':
-          node: ubuntu-trusty
-          pipeline: gate
-          backend: postgresql
-      - '{pipeline}-aodh-dsvm-functional-{backend}':
-          node: ubuntu-trusty
-          pipeline: gate
-          backend: mongodb
-      - 'gate-aodh-dsvm-tempest-plugin-{backend}{network}':
-          backend: hbase
-          network: ''
-      - 'gate-aodh-dsvm-tempest-plugin-{backend}{network}':
-          backend: mongodb
-          network: ''
-      - 'gate-aodh-dsvm-tempest-plugin-{backend}{network}':
-          backend: mysql
-          network: ''
-      - 'gate-aodh-dsvm-tempest-plugin-{backend}{network}':
-          backend: mysql
-          network: '-neutron'
-      - 'gate-aodh-dsvm-tempest-plugin-{backend}{network}':
-          backend: postgresql
-          network: ''
-      - 'gate-telemetry-dsvm-integration-{name}'
-      - install-guide-jobs:
-          service: telemetry-alarming
+#- project:
+#    name: aodh
+#    tarball-site: tarballs.openstack.org
+ #   doc-publisher-site: docs.openstack.org
+#
+#    jobs:
+#      - python-jobs
+#      - 'gate-{name}-python35{suffix}':
+#          suffix: ''
+#      - pypi-jobs
+#      - openstack-publish-jobs
+#      - translation-jobs
+ #     - openstack-releasenotes-jobs
+#      - '{pipeline}-aodh-dsvm-functional-{backend}':
+#          node: ubuntu-trusty
+#          pipeline: gate
+#          backend: hbase
+#      - '{pipeline}-aodh-dsvm-functional-{backend}':
+#          node: ubuntu-trusty
+#          pipeline: gate
+#          backend: mysql
+#      - '{pipeline}-aodh-dsvm-functional-{backend}':
+#          node: ubuntu-trusty
+#          pipeline: gate
+#          backend: postgresql
+#      - '{pipeline}-aodh-dsvm-functional-{backend}':
+#          node: ubuntu-trusty
+#          pipeline: gate
+#          backend: mongodb
+#      - 'gate-aodh-dsvm-tempest-plugin-{backend}{network}':
+#          backend: hbase
+#          network: ''
+#      - 'gate-aodh-dsvm-tempest-plugin-{backend}{network}':
+#          backend: mongodb
+#          network: ''
+#      - 'gate-aodh-dsvm-tempest-plugin-{backend}{network}':
+#          backend: mysql
+#          network: ''
+#      - 'gate-aodh-dsvm-tempest-plugin-{backend}{network}':
+#          backend: mysql
+#          network: '-neutron'
+#      - 'gate-aodh-dsvm-tempest-plugin-{backend}{network}':
+##          backend: postgresql
+#          network: ''
+#      - 'gate-telemetry-dsvm-integration-{name}'
+#      - install-guide-jobs:
+#          service: telemetry-alarming
 
 
 #- project:
@@ -1023,11 +1023,11 @@
 #      - python-jobs
 #      - pypi-jobs
 #
-- project:
-    name: citest
-    
-    jobs:
-      - citest-verified-flow
+#- project:
+#    name: citest
+#    
+#    jobs:
+#      - citest-verified-flow
       
 #- project:
 #    name: ciwatch
