@@ -1023,6 +1023,12 @@
 #      - python-jobs
 #      - pypi-jobs
 #
+- project:
+    name: citest
+    
+    jobs:
+      - citest-verified-flow
+      
 #- project:
 #    name: ciwatch
 #    tarball-site: tarballs.openstack.org
