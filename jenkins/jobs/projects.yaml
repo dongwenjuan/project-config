@@ -124,27 +124,27 @@
 #      - gate-anvil-venv-{node}:
 #          node: ubuntu-trusty
 #
-#- project:
-#    name: aodh
-#    tarball-site: tarballs.openstack.org
- #   doc-publisher-site: docs.openstack.org
-#
-#    jobs:
-#      - python-jobs
-#      - 'gate-{name}-python35{suffix}':
-#          suffix: ''
-#      - pypi-jobs
-#      - openstack-publish-jobs
-#      - translation-jobs
- #     - openstack-releasenotes-jobs
-#      - '{pipeline}-aodh-dsvm-functional-{backend}':
-#          node: ubuntu-trusty
-#          pipeline: gate
-#          backend: hbase
-#      - '{pipeline}-aodh-dsvm-functional-{backend}':
-#          node: ubuntu-trusty
-#          pipeline: gate
-#          backend: mysql
+- project:
+    name: aodh
+    tarball-site: tarballs.openstack.org
+    doc-publisher-site: docs.openstack.org
+
+    jobs:
+      - python-jobs
+      - 'gate-{name}-python35{suffix}':
+          suffix: ''
+      - pypi-jobs
+      - openstack-publish-jobs
+      - translation-jobs
+      - openstack-releasenotes-jobs
+     - '{pipeline}-aodh-dsvm-functional-{backend}':
+          node: ubuntu-trusty
+          pipeline: gate
+          backend: hbase
+      - '{pipeline}-aodh-dsvm-functional-{backend}':
+          node: ubuntu-trusty
+          pipeline: gate
+          backend: mysql
 #      - '{pipeline}-aodh-dsvm-functional-{backend}':
 #          node: ubuntu-trusty
 #          pipeline: gate
