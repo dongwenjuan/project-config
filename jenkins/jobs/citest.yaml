@@ -5,7 +5,6 @@
     builders:
       - link-logs
       - net-info
-      - devstack-checkout
       - shell: |
           #!/bin/bash -xe
           sudo sed -i 's/mirrors.tuna.tsinghua.edu.cn/mirrors.gslb.zte.com.cn/g' /etc/apt/sources.list
