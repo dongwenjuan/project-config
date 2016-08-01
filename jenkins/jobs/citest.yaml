@@ -8,7 +8,7 @@
       - devstack-checkout
       - shell: |
           #!/bin/bash -xe
-          sudo sed -i s/mirrors.tuna.tsinghua.edu.cn/mirrors.zte.com.cn/g /etc/apt/sources.list
+          sudo sed -i 's/mirrors.tuna.tsinghua.edu.cn/mirrors.zte.com.cn/g' /etc/apt/sources.list
           sudo apt-get update
 
     publishers:
