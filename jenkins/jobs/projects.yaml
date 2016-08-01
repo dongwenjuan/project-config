@@ -1023,11 +1023,11 @@
 #      - python-jobs
 #      - pypi-jobs
 #
-#- project:
-#    name: citest
-#    
-#    jobs:
-#      - citest-verified-flow
+- project:
+    name: citest
+    
+    jobs:
+      - '{name}-verified-flow'
       
 #- project:
 #    name: ciwatch
